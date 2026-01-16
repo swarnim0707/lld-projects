@@ -1,0 +1,53 @@
+# Ignore build directories
+/build/
+/out/
+/target/
+
+# Ignore compiled class files
+*.class
+
+# Ignore IDE specific files (Eclipse, IntelliJ, etc.)
+*.idea/
+*.iml
+*.classpath
+*.project
+*.settings/
+*.vscode/
+
+# Ignore Maven specific files
+/.mvn/
+/pom.xml.tag
+/pom.xml.versionsBackup
+/pom.xml.releaseBackup
+/pom.xml.next
+
+# Ignore Gradle specific files
+.gradle/
+build/
+*.gradle
+*.jar
+*.war
+*.ear
+
+# Ignore local application properties
+/application.properties
+
+# Ignore other configuration files
+*.log
+*.tmp
+*.bak
+
+# Ignore generated files
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+
+# Ignore generated files by other tools
+*.hprof
+*.heapdump
+
+# Ignore user-specific files and directories
+*.user
+*.prefs
+*.swp
