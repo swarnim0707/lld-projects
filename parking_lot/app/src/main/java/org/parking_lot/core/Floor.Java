@@ -9,10 +9,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 public class Floor {
     private final int floorNum;
-    private final HashSet<Spot> reservedSet;
-    private final HashSet<Spot> compactSet;
-    private final HashSet<Spot> regularSet;
-    private final HashSet<Spot> largeSet;
+    private final HashSet<Spot> allSpots = new HashSet<>();;
 
     private PriorityBlockingQueue<Spot> vacantReservedQueue = new PriorityBlockingQueue<>();
     private PriorityBlockingQueue<Spot> vacantCompactQueue = new PriorityBlockingQueue<>();
@@ -29,15 +26,16 @@ public class Floor {
             throw new IllegalArgumentException("Floor Constructor arguments cannot be null");
         }
         this.floorNum = floorNum;
-        this.reservedSet = reservedSet;
-        this.compactSet = compactSet;
-        this.regularSet = regularSet;
-        this.largeSet = largeSet;
 
-        this.vacantReservedQueue.addAll(this.reservedSet);
-        this.vacantCompactQueue.addAll(this.compactSet);
-        this.vacantRegularQueue.addAll(this.regularSet);
-        this.vacantLargeQueue.addAll(this.largeSet);
+        this.allSpots.addAll(reservedSet);
+        this.allSpots.addAll(compactSet);
+        this.allSpots.addAll(regularSet);
+        this.allSpots.addAll(largeSet);
+
+        this.vacantReservedQueue.addAll(reservedSet);
+        this.vacantCompactQueue.addAll(compactSet);
+        this.vacantRegularQueue.addAll(regularSet);
+        this.vacantLargeQueue.addAll(largeSet);
     }
 
     public int getFloorNum() {

@@ -55,6 +55,8 @@ public class Lot {
             checkOutStatus = floorSpot.getKey().attemptCheckout(floorSpot.getValue(), vehicleNum);
         }
         if(!checkOutStatus) return "This vehicle is not checked in";
+
+        spotMap.remove(vehicleNum);
         return "Checked out successfully";
     }
 }

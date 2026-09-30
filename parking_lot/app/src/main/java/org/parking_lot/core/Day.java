@@ -3,7 +3,7 @@ package org.parking_lot.core;
 
 import java.util.EnumSet;
 
-public enum Practice { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
+public enum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
 
 //public final class Day extends Enum<Day> {
 //    public static final Day MONDAY = new Day("MONDAY", 0);
@@ -15,15 +15,15 @@ public enum Practice { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, S
 //        super(name, ordinal);
 //    }
 //
-//    public static Day[] values() {return VALUES};
+//    public static Day[] values() {return VALUES.clone();}
 //    public static Day valueOf(String day) {
-//        for(int i: )
+//        return Enum.valueOf(Day.class, day);
 //    };
 //}
 
 class EnumSetDemo {
     public static void main(String[] args) {
-        EnumSet<Practice> a = EnumSet.range(Practice.MONDAY, Practice.FRIDAY);
+        EnumSet<Day> a = EnumSet.range(Day.TUESDAY, Day.MONDAY);
 
     }
 }

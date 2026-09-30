@@ -8,7 +8,7 @@ import java.time.Duration;
 public class Spot implements Comparable<Spot> {
     private final int distanceFromEntrance;
     private final  SpotCategory category;
-    private boolean vacant = false;
+    private boolean vacant = true;
     private final String label;
     private LocalDateTime checkinTime;
     private String vehicleNum = "";
@@ -70,5 +70,6 @@ public class Spot implements Comparable<Spot> {
         this.checkinTime = now;
         this.vacant = false;
         this.vehicleNum = vehicleNum;
+        this.bill = 0.0;
     }
 }
